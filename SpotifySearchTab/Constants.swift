@@ -27,5 +27,31 @@ struct K{
         Color.color14,
         Color.color15
     ]
+    static let categories = [
+        "Podcasts",
+        "Made for you",
+        "Charts",
+        "New Releases",
+        "Radio",
+        "Discover",
+        "Live Events",
+        "Mood",
+        "Chill",
+        "Summer",
+        "At home",
+        "Party",
+        "Workout",
+        "Decades",
+        "Rock",
+        "Focus",
+        "Kids",
+        "Gaming",
+        "Jazz",
+        "Hip-Hop",
+        "Pop",
+        "Indie",
+        "Dance",
+        "Instrumental"
+    ]
     
 }

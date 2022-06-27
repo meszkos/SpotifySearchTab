@@ -13,6 +13,7 @@
 		222807162869CC54008B5044 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222807152869CC54008B5044 /* Preview Assets.xcassets */; };
 		2228071D2869CE11008B5044 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2228071C2869CE11008B5044 /* Extentions.swift */; };
 		22B1E7792869D08A00A3810A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E7782869D08A00A3810A /* Constants.swift */; };
+		22B1E77C2869D3E100A3810A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E77B2869D3E100A3810A /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		222807152869CC54008B5044 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2228071C2869CE11008B5044 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		22B1E7782869D08A00A3810A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		22B1E77B2869D3E100A3810A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				2228070E2869CC44008B5044 /* SpotifySearchTabApp.swift */,
 				222807102869CC44008B5044 /* ContentView.swift */,
+				22B1E77A2869D3D100A3810A /* Components */,
 				2228071C2869CE11008B5044 /* Extentions.swift */,
 				22B1E7782869D08A00A3810A /* Constants.swift */,
 				222807122869CC54008B5044 /* Assets.xcassets */,
@@ -71,6 +74,14 @@
 				222807152869CC54008B5044 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22B1E77A2869D3D100A3810A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				22B1E77B2869D3E100A3810A /* CategoryCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 				2228070F2869CC44008B5044 /* SpotifySearchTabApp.swift in Sources */,
 				2228071D2869CE11008B5044 /* Extentions.swift in Sources */,
 				22B1E7792869D08A00A3810A /* Constants.swift in Sources */,
+				22B1E77C2869D3E100A3810A /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
