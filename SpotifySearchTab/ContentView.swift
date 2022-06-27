@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var searchText: String = ""
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            Color.black
+                .ignoresSafeArea()
+            VStack(alignment: .leading){
+                Text("Search")
+                    .font(.title.bold())
+                    .foregroundColor(.white)
+                CustomTextField(text: $searchText)
+                ScrollView{
+                    
+                }
+            }
+        }
+        
     }
 }
 

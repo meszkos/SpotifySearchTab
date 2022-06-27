@@ -19,12 +19,17 @@ struct CustomTextField: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
-                TextField("Artists, songs or podcasts", text: $text)
+                TextField("", text: $text)
+                    .placeholder(when: text.isEmpty) {
+                            Text("Artists, songs or podcasts").foregroundColor(.black)
+                        
+                    }
+                }
+            .padding(.horizontal)
             }
-        }
         .frame(height: 55)
-        .cornerRadius(10)
-    }
+        .cornerRadius(8)
+        }
 }
 
 struct CustomTextField_Previews: PreviewProvider {
