@@ -27,7 +27,7 @@ struct CustomTextField: View {
                 }
             .padding(.horizontal)
             }
-        .frame(height: 55)
+        .frame(height: 45)
         .cornerRadius(8)
         }
 }

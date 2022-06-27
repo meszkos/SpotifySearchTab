@@ -15,13 +15,14 @@ struct CategoryCell: View {
     var body: some View {
         
         NavigationLink{
-            //
+            CategoryView(category: category)
         }label: {
             VStack(){
                 HStack{
                     Text(category)
                         .font(.title2.bold())
                         .foregroundColor(.white)
+                        .multilineTextAlignment(.leading)
                     Spacer()
                 }
                 .padding()

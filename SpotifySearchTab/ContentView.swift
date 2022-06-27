@@ -16,12 +16,28 @@ struct ContentView: View {
             Color.black
                 .ignoresSafeArea()
             VStack(alignment: .leading){
-                Text("Search")
-                    .font(.title.bold())
-                    .foregroundColor(.white)
+                search
                 CustomTextField(text: $searchText)
                 ScrollView{
-                    
+                    genresHeader
+                    topGenresRow
+                        .padding(.bottom, 8)
+                    topGenresRow
+                    browseAllHeader
+                    HStack(spacing: 15){
+                        VStack(spacing: 15){
+                            ForEach(getLeftCat(), id: \.self){
+                                category in
+                                CategoryCell(category: category, color: K.cellColors.randomElement()!)
+                            }
+                        }
+                        VStack(spacing: 15){
+                            ForEach(getRightCat(), id: \.self){
+                                category in
+                                CategoryCell(category: category, color: K.cellColors.randomElement()!)
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -33,4 +49,64 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+extension ContentView{
+    
+//MARK: - Texts
+    
+    var search: some View{
+        Text("Search")
+            .font(.title.bold())
+            .foregroundColor(.white)
+    }
+    var genresHeader: some View{
+        HStack{
+            Text("Your top genres")
+                .foregroundColor(.white)
+                .font(.title3).bold()
+            Spacer()
+        }
+        .padding(.vertical)
+    }
+    var browseAllHeader: some View{
+        HStack{
+            Text("Browse all")
+                .foregroundColor(.white)
+                .font(.title3).bold()
+            Spacer()
+        }
+        .padding(.vertical)
+    }
+    
+
+//MARK: - Row
+    var topGenresRow: some View{
+        HStack(spacing: 15){
+            CategoryCell(category: K.categories.randomElement()!, color: K.cellColors.randomElement()!)
+            CategoryCell(category: K.categories.randomElement()!, color: K.cellColors.randomElement()!)
+        }
+    }
+ 
+//MARK: - Methods
+    
+    func getLeftCat() -> [String]{
+        let index = (K.categories.count - 1) / 2
+        var array: [String] = []
+        for i in 0...index{
+            array.append(K.categories[i])
+        }
+        return array
+    }
+    func getRightCat() -> [String]{
+        let leftIndex = (K.categories.count ) / 2
+        let index = K.categories.count - 1
+        var array: [String] = []
+        for i in leftIndex...index{
+            array.append(K.categories[i])
+        }
+        return array
+    }
+    
+    
 }

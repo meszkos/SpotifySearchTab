@@ -15,6 +15,7 @@
 		22B1E7792869D08A00A3810A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E7782869D08A00A3810A /* Constants.swift */; };
 		22B1E77C2869D3E100A3810A /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E77B2869D3E100A3810A /* CategoryCell.swift */; };
 		22B1E77F2869D73F00A3810A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E77E2869D73F00A3810A /* CustomTextField.swift */; };
+		22B1E7812869F3E700A3810A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1E7802869F3E700A3810A /* CategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		22B1E7782869D08A00A3810A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		22B1E77B2869D3E100A3810A /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		22B1E77E2869D73F00A3810A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		22B1E7802869F3E700A3810A /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				2228070E2869CC44008B5044 /* SpotifySearchTabApp.swift */,
 				222807102869CC44008B5044 /* ContentView.swift */,
+				22B1E7802869F3E700A3810A /* CategoryView.swift */,
 				22B1E77A2869D3D100A3810A /* Components */,
 				2228071C2869CE11008B5044 /* Extentions.swift */,
 				22B1E7782869D08A00A3810A /* Constants.swift */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222807112869CC44008B5044 /* ContentView.swift in Sources */,
+				22B1E7812869F3E700A3810A /* CategoryView.swift in Sources */,
 				2228070F2869CC44008B5044 /* SpotifySearchTabApp.swift in Sources */,
 				22B1E77F2869D73F00A3810A /* CustomTextField.swift in Sources */,
 				2228071D2869CE11008B5044 /* Extentions.swift in Sources */,
