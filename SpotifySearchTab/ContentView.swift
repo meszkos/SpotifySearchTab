@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State private var searchText: String = ""
     
+    
+    
     var body: some View {
         ZStack{
             Color.black
@@ -26,17 +28,20 @@ struct ContentView: View {
                     browseAllHeader
                     HStack(spacing: 15){
                         VStack(spacing: 15){
-                            ForEach(getLeftCat(), id: \.self){
+                            ForEach(searchResults1, id: \.self){
                                 category in
                                 CategoryCell(category: category, color: K.cellColors.randomElement()!)
                             }
+                            .searchable(text: $searchText)
                         }
                         VStack(spacing: 15){
-                            ForEach(getRightCat(), id: \.self){
+                            ForEach(searchResults2, id: \.self){
                                 category in
                                 CategoryCell(category: category, color: K.cellColors.randomElement()!)
                             }
+                            .searchable(text: $searchText)
                         }
+                       
                     }
                 }
             }
@@ -52,6 +57,22 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 extension ContentView{
+    
+//MARK: - Data
+    var searchResults1: [String] {
+            if searchText.isEmpty {
+                return getLeftCat()
+            } else {
+                return getLeftCat().filter { $0.contains(searchText) }
+            }
+        }
+    var searchResults2: [String] {
+            if searchText.isEmpty {
+                return getRightCat()
+            } else {
+                return getRightCat().filter { $0.contains(searchText) }
+            }
+        }
     
 //MARK: - Texts
     
